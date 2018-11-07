@@ -8,6 +8,9 @@ Click on a card to flip it, then try to find the matching pair. Match all 8 pair
 
 ## Resources
 
+Adobe Typekit Font - FatFrank
+https://fonts.adobe.com/fonts/fatfrank
+
 Card animations
 http://animista.net/
 
