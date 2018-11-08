@@ -1,396 +1,4 @@
 html {
-<<<<<<< HEAD
-	box-sizing: border-box;
-}
-*, *::before, *::after {
-	box-sizing: inherit;
-}
-html, body {
-	width: 100%;
-	height: 100%;
-	margin: 0;
-	padding: 0;
-}
-body {
-	background: url('../img/emojibg.png');
-	/* Background pattern from Subtle Patterns */
-	-webkit-animation: slide 15s linear infinite;
-	font-family: fatfrank, sans-serif;
-	font-weight: 900;
-	font-style: normal;
-}
-@-webkit-keyframes slide {
-	from {
-		background-position: 0 0;
-		transform: rotate(0deg);
-	}
-	to {
-		background-position: -400px 0;
-		transform: rotate(0deg);
-	}
-}
-.container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-}
-h1 {
-	margin: 60px;
-	font-family: fatfrank, sans-serif;
-	font-weight: 900;
-	font-style: normal;
-}
-/*
- * Styles for the deck of cards
- */
-
-.deck {
-	width: 375px;
-	background: linear-gradient(137deg, #0075a7, #6000d6, #d13c3c, #ff8748, #ffc748, #48ff8c, #5ecb00, #009adc);
-	background-size: 1600% 1600%;
-	padding: 20px;
-	border-radius: 10px;
-	box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
-	-webkit-animation: AnimationName 60s ease infinite;
-	-moz-animation: AnimationName 60s ease infinite;
-	animation: AnimationName 60s ease infinite;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	align-items: center;
-}
-@-webkit-keyframes AnimationName {
-	0% {
-		background-position: 4% 0%
-	}
-	50% {
-		background-position: 97% 100%
-	}
-	100% {
-		background-position: 4% 0%
-	}
-}
-@-moz-keyframes AnimationName {
-	0% {
-		background-position: 4% 0%
-	}
-	50% {
-		background-position: 97% 100%
-	}
-	100% {
-		background-position: 4% 0%
-	}
-}
-@keyframes AnimationName {
-	0% {
-		background-position: 4% 0%
-	}
-	50% {
-		background-position: 97% 100%
-	}
-	100% {
-		background-position: 4% 0%
-	}
-}
-.card {
-	margin: 6px;
-	width: 70px;
-	height: 70px;
-	background-color: #feffa7;
-	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cg fill='%23ff0d0d' fill-opacity='0.34'%3E%3Cpath fill-rule='evenodd' d='M0 0h4v4H0V0zm4 4h4v4H4V4z'/%3E%3C/g%3E%3C/svg%3E");
-	font-size: 0;
-	color: #ffffff;
-	border-radius: 8px;
-	cursor: pointer;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
-}
-.card:hover {
-	-webkit-animation: pop-up-top 0.1s cubic-bezier(0.100, 0.200, 0.300, 0.400) both;
-	animation: pop-up-top 0.1s cubic-bezier(0.100, 0.200, 0.300, 0.400) both;
-}
-@-webkit-keyframes pop-up-top {
-	0% {
-		-webkit-transform: translateY(0);
-		transform: translateY(0);
-		-webkit-transform-origin: 5% 5%;
-		transform-origin: 5% 5%;
-		text-shadow: none;
-	}
-	100% {
-		-webkit-transform: translateY(-5px);
-		transform: translateY(-5px);
-		-webkit-transform-origin: 5% 5%;
-		transform-origin: 5% 5%;
-		text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
-	}
-}
-@keyframes pop-up-top {
-	0% {
-		-webkit-transform: translateY(0);
-		transform: translateY(0);
-		-webkit-transform-origin: 5% 5%;
-		transform-origin: 5% 5%;
-		text-shadow: none;
-	}
-	100% {
-		-webkit-transform: translateY(-5px);
-		transform: translateY(-5px);
-		-webkit-transform-origin: 5% 5%;
-		transform-origin: 5% 5%;
-		text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
-	}
-}
-.card.open {
-	background: #02b3e4;
-	cursor: default;
-	-webkit-animation: flip-vertical-right .4s cubic-bezier(.455, .03, .515, .955) both;
-	animation: flip-vertical-right .3s cubic-bezier(.455, .03, .515, .955) both;
-}
-@-webkit-keyframes flip-vertical-right {
-	0% {
-		-webkit-transform: rotateY(0);
-		transform: rotateY(0)
-	}
-	100% {
-		-webkit-transform: rotateY(180deg);
-		transform: rotateY(180deg)
-	}
-}
-@keyframes flip-vertical-right {
-	0% {
-		-webkit-transform: rotateY(0);
-		transform: rotateY(0)
-	}
-	100% {
-		-webkit-transform: rotateY(180deg);
-		transform: rotateY(180deg)
-	}
-}
-.card.reveal {
-	font-size: 2em;
-}
-.card.match {
-	cursor: default;
-	background: #007c0f;
-	font-size: 2em;
-	-webkit-animation: jello-horizontal .9s both;
-	animation: jello-horizontal .9s both;
-}
-@-webkit-keyframes jello-horizontal {
-	0% {
-		-webkit-transform: scale3d(1, 1, 1);
-		transform: scale3d(1, 1, 1)
-	}
-	30% {
-		-webkit-transform: scale3d(1.25, .75, 1);
-		transform: scale3d(1.25, .75, 1)
-	}
-	40% {
-		-webkit-transform: scale3d(.75, 1.25, 1);
-		transform: scale3d(.75, 1.25, 1)
-	}
-	50% {
-		-webkit-transform: scale3d(1.15, .85, 1);
-		transform: scale3d(1.15, .85, 1)
-	}
-	65% {
-		-webkit-transform: scale3d(.95, 1.05, 1);
-		transform: scale3d(.95, 1.05, 1)
-	}
-	75% {
-		-webkit-transform: scale3d(1.05, .95, 1);
-		transform: scale3d(1.05, .95, 1)
-	}
-	100% {
-		-webkit-transform: scale3d(1, 1, 1);
-		transform: scale3d(1, 1, 1)
-	}
-}
-@keyframes jello-horizontal {
-	0% {
-		-webkit-transform: scale3d(1, 1, 1);
-		transform: scale3d(1, 1, 1)
-	}
-	30% {
-		-webkit-transform: scale3d(1.25, .75, 1);
-		transform: scale3d(1.25, .75, 1)
-	}
-	40% {
-		-webkit-transform: scale3d(.75, 1.25, 1);
-		transform: scale3d(.75, 1.25, 1)
-	}
-	50% {
-		-webkit-transform: scale3d(1.15, .85, 1);
-		transform: scale3d(1.15, .85, 1)
-	}
-	65% {
-		-webkit-transform: scale3d(.95, 1.05, 1);
-		transform: scale3d(.95, 1.05, 1)
-	}
-	75% {
-		-webkit-transform: scale3d(1.05, .95, 1);
-		transform: scale3d(1.05, .95, 1)
-	}
-	100% {
-		-webkit-transform: scale3d(1, 1, 1);
-		transform: scale3d(1, 1, 1)
-	}
-}
-.card.nomatch {
-	cursor: default;
-	background: #ed3d20;
-	font-size: 2em;
-	-webkit-animation: shake-horizontal .8s cubic-bezier(.455, .03, .515, .955) both;
-	animation: shake-horizontal .8s cubic-bezier(.455, .03, .515, .955) both;
-}
-@-webkit-keyframes shake-horizontal {
-	0%, 100% {
-		-webkit-transform: translateX(0);
-		transform: translateX(0)
-	}
-	10%, 30%, 50%, 70% {
-		-webkit-transform: translateX(-10px);
-		transform: translateX(-10px)
-	}
-	20%, 40%, 60% {
-		-webkit-transform: translateX(10px);
-		transform: translateX(10px)
-	}
-	80% {
-		-webkit-transform: translateX(8px);
-		transform: translateX(8px)
-	}
-	90% {
-		-webkit-transform: translateX(-8px);
-		transform: translateX(-8px)
-	}
-}
-@keyframes shake-horizontal {
-	0%, 100% {
-		-webkit-transform: translateX(0);
-		transform: translateX(0)
-	}
-	10%, 30%, 50%, 70% {
-		-webkit-transform: translateX(-10px);
-		transform: translateX(-10px)
-	}
-	20%, 40%, 60% {
-		-webkit-transform: translateX(10px);
-		transform: translateX(10px)
-	}
-	80% {
-		-webkit-transform: translateX(8px);
-		transform: translateX(8px)
-	}
-	90% {
-		-webkit-transform: translateX(-8px);
-		transform: translateX(-8px)
-	}
-}
-.deck .card.notouch {
-	pointer-events: none;
-}
-/*
- * Styles for the Score Panel
- */
-
-.score-panel {
-	text-align: left;
-	width: 345px;
-	margin: 0px 50px 10px 0px;
-}
-.score-panel .stars {
-	padding: 0;
-	display: inline-block;
-	margin: 0px 10px 10px 0px;
-	list-style: none;
-}
-.score-panel .stars li, #stars li {
-	list-style: none;
-	display: inline-block;
-	font-size: 1.2em;
-}
-.score-panel .reset {
-	font-family: fatfrank, sans-serif;
-	font-weight: 900;
-	font-style: normal;
-	font-size: 1.2em;
-	float: right;
-	cursor: pointer;
-}
-.shufflecards {
-	-webkit-animation: rotate-center 0.6s ease-in-out both;
-	animation: rotate-center 0.6s ease-in-out both;
-}
-@-webkit-keyframes rotate-center {
-	0% {
-		-webkit-transform: rotate(0);
-		transform: rotate(0);
-	}
-	100% {
-		-webkit-transform: rotate(360deg);
-		transform: rotate(360deg);
-	}
-}
-@keyframes rotate-center {
-	0% {
-		-webkit-transform: rotate(0);
-		transform: rotate(0);
-	}
-	100% {
-		-webkit-transform: rotate(360deg);
-		transform: rotate(360deg);
-	}
-}
-.moves, .timer {
-	font-family: fatfrank, sans-serif;
-	font-weight: 900;
-	font-style: normal;
-	font-size: 1.2em;
-	margin: 0px 2px 0px 4px;
-}
-/* Win Modal */
-
-.modal {
-	display: none;
-	position: fixed;
-	z-index: 1;
-	left: 0;
-	top: 0;
-	padding-top: 100px;
-	width: 100%;
-	height: 200%;
-	overflow: auto;
-	background-color: rgb(0, 0, 0);
-	background-color: rgba(0, 0, 0, 0.4);
-}
-.modal-content {
-	text-align: center;
-	background-color: #fefefe;
-	margin: auto;
-	padding: 20px;
-	border: 1px solid #888;
-	width: 80%;
-}
-.confettipopper {
-	font-size: 5em;
-	margin-top: 60px;
-}
-.modalh1 {
-	margin: 20px;
-	font-family: fatfrank, sans-serif;
-	font-weight: 900;
-	font-style: normal;
-}
-@media only screen and (max-width: 768px) {
-	.container {
-		align-items: baseline;
-	}
-=======
   box-sizing: border-box;
 }
 
@@ -447,7 +55,7 @@ h1 {
  * Styles for the deck of cards
  */
 .deck {
-  width: 400px;
+  width: 375px;
   background: linear-gradient(137deg, #0075a7, #6000d6, #d13c3c, #ff8748, #ffc748, #48ff8c, #5ecb00, #009adc);
   background-size: 1600% 1600%;
   padding: 20px;
@@ -504,10 +112,10 @@ h1 {
   }
 }
 
-.deck .card {
+.card {
   margin: 6px;
-  width: 75px;
-  height: 75px;
+  width: 70px;
+  height: 70px;
   background-color: #feffa7;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cg fill='%23ff0d0d' fill-opacity='0.34'%3E%3Cpath fill-rule='evenodd' d='M0 0h4v4H0V0zm4 4h4v4H4V4z'/%3E%3C/g%3E%3C/svg%3E");
   font-size: 0;
@@ -561,7 +169,7 @@ h1 {
   }
 }
 
-.deck .card.open {
+.card.open {
   background: #02b3e4;
   cursor: default;
   -webkit-animation: flip-vertical-right .4s cubic-bezier(.455, .03, .515, .955) both;
@@ -592,11 +200,11 @@ h1 {
   }
 }
 
-.deck .card.reveal {
+.card.reveal {
   font-size: 2em;
 }
 
-.deck .card.match {
+.card.match {
   cursor: default;
   background: #007c0f;
   font-size: 2em;
@@ -678,7 +286,7 @@ h1 {
   }
 }
 
-.deck .card.nomatch {
+.card.nomatch {
   cursor: default;
   background: #ed3d20;
   font-size: 2em;
@@ -760,7 +368,7 @@ h1 {
   list-style: none;
 }
 
-.score-panel .stars li {
+.score-panel .stars li, #stars li {
   list-style: none;
   display: inline-block;
   font-size: 1.2em;
@@ -846,5 +454,10 @@ h1 {
   font-family: fatfrank, sans-serif;
   font-weight: 900;
   font-style: normal;
->>>>>>> e2fc4d8ea6e49a835e485cadfc7e48a437b29234
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    align-items: baseline;
+  }
 }
